@@ -1,0 +1,83 @@
+\documentclass{article}
+
+\usepackage{mathtools} % useful for paired delimiters
+
+\title{Homework: LaTeX I}
+\author{George Winters}
+\date{August 23, 2023}
+
+% Paired delimiter
+\DeclarePairedDelimiter{\floor}{\lfloor}{/rfloor}
+\DeclarePairedDelimiter{\ceiling}{\lceil}{\rceil}
+
+\begin{document}
+\maketitle
+\newpage
+The Pigeonhole Principle states that if you try to distribute more objects into fewer containers, then at least one container must contain more than one object. This principle is based on the idea that if you have more pigeons (objects) than pigeonholes (containers), some pigeonholes must contain more than one pigeon.
+\\[2\baselineskip]The Extended Pigeonhole Principle is an extension of the Pigeonhole Principle that considers fractional parts of the number of objects being distributed. It states that if you try to distribute n objects into k containers, then at least one container must contain n/k objects.
+\\[2\baselineskip]Set: A collection of distinct objects.
+\\Member of: Denoted by the symbol "," it indicates that an element belongs to a set.
+\\Cardinality: The number of elements in a set, denoted by "|A|" for set A.
+\\Mapping: The relationship between elements of one set to elements of another set.
+\\Equal: Denoted by the symbol "=" when two values or sets are exactly the same.
+\\Not equal: Denoted by the symbol "," it indicates that two values or sets are not the same.
+\\Floor: Denoted by the symbol "x," it represents the greatest integer less than or equal to x.
+\\Ceiling: Denoted by the symbol "x," it represents the smallest integer greater than or equal to x.
+\\Fraction: A number that represents a part of a whole or a ratio between two quantities.
+\\Sequence: An ordered list of elements.
+
+\newpage
+
+\title{Homework: CSIII}
+\\[2\baselineskip]1. Merge Sort: - Merge Sort is a divide-and-conquer algorithm. - It recursively divides the input array into two halves until each subarray has only one element. - It then merges the sorted subarrays back together to obtain the final sorted array. - The key step is the merging process, where it compares and combines the elements of the two subarrays. - Time Complexity: Merge Sort has a time complexity of O(n log n) in all cases, where n is the number of elements in the input array. - Space Complexity: Merge Sort has a space complexity of O(n) since it requires additional space to store the auxiliary arrays during the merging process. 2. Quicksort: - Quicksort is also a divide-and-conquer algorithm. - It selects a pivot element, partitions the array into two subarrays based on the pivot, and recursively applies the same process to the subarrays. - The partitioning step places the pivot in its correct position within the array, such that all elements to the left are smaller, and all elements to the right are larger. - Time Complexity: Quicksort has an average-case time complexity of O(n log n), but in the worst case, it can have a time complexity of O(n2) if the pivot selection is unbalanced. - Space Complexity: Quicksort has a space complexity of O(log n) on average, as it uses the call stack for recursion. However, in the worst case, it can have a space complexity of O(n) if the pivot selection is unbalanced. 3. Heapsort: - Heapsort uses a binary heap data structure to sort the elements. - It first builds a max-heap from the input array, which ensures that the maximum element is at the root. - It repeatedly extracts the maximum element from the heap and places it at the end of the array. - Time Complexity: Heapsort has a time complexity of O(n log n) in all cases, as both building the heap and extracting the maximum element take O(log n) time, and these operations are performed n times. - Space Complexity: Heapsort has a space complexity of O(1) since it sorts the elements in-place, without requiring additional memory beyond the input array. In terms of time complexity, Merge Sort and Heapsort have the same time complexity of O(n log n) in all cases, while Quicksort has an average-case time complexity of O(n log n) but can degrade to O(n2) in the worst case. In terms of space complexity, Merge Sort has a space complexity of O(n), Quicksort has an average space complexity of O(log n) but can require O(n) space in the worst case, and Heapsort has a space complexity of O(1), making it more memory-efficient. Overall, Merge Sort and Heapsort are generally preferred over Quicksort due to their consistent time complexity and better worst-case behavior. However, the choice of sort algorithm depends on various factors such as the size of the input, the distribution of the data, and the available memory.
+
+\newpage
+
+2.1. Is $-1$ an odd integer, as we have defined the term? Why or why not?
+\\[2\baselineskip]No, $-1$ is not an odd integer. By definition, an integer $n$ is odd if there exists an integer $k$ such that $n = 2k + 1$. However, for $-1$, there is no integer $k$ such that $-1 = 2k + 1$.
+2.3. Prove that the product of two odd numbers is an odd number.
+\\[2\baselineskip]Let $m$ and $n$ be two odd numbers. By definition, there exist integers $a$ and $b$ such that $m = 2a + 1$ and $n = 2b + 1$. We can express the product of these two odd numbers as:
+\[mn = (2a + 1)(2b + 1)\] \[mn = 4ab + 2a + 2b + 1\]
+Since $4ab + 2a + 2b$ is an even number (as it can be expressed as $2(2ab + a + b)$), we can rewrite the expression as:
+\[mn = 2k + 1\]
+where $k = 2ab + a + b$. This shows that the product $mn$ is an odd number.
+\\[2\baselineskip]2.5. Prove that $\sqrt{3^2}$ is irrational.
+\\[2\baselineskip]Assume, for contradiction, that $\sqrt{3^2}$ is rational. Then, there exist integers $p$ and $q$ such that $\sqrt{3^2} = \frac{p}{q}$, where $p$ and $q$ have no common factors other than 1. Squaring both sides of the equation, we get:
+\[3 = \frac{p^2}{q^2}\] \[3q^2 = p^2\]
+This implies that $p^2$ is divisible by 3. Since any integer squared is either divisible by 3 or leaves a remainder of 1 when divided by 3, it follows that $p$ itself must be divisible by 3. Let $p = 3k$, where $k$ is an integer. Substituting this into the previous equation, we have:
+\[3q^2 = (3k)^2\]
+\[3q^2 = 9k^2\]
+\[q^2 = 3k^2\]
+Similarly, this implies that $q$ is also divisible by 3. However, this contradicts our assumption that $p$ and $q$ have no common factors other than 1. Therefore, our initial assumption that $\sqrt{3^2}$ is rational must be false, and thus $\sqrt{3^2}$ is irrational.
+\\[2\baselineskip]2.7. Show that there is a fair seven-sided die; that is, a polyhedron with seven faces that is equally likely to fall on any one of its faces.
+\\[2\baselineskip]Although this argument is not a strict mathematical proof, it relies on some intuitions about the properties of physical objects of similar geometric shapes. Consider a cube. Each face of the cube has an equal chance of landing face up when rolled. Now, imagine stretching one of the faces of the cube, while keeping the other faces intact. The resulting shape would have seven faces, with each face still having an equal chance of landing face up when rolled. Thus, there exists a fair seven-sided die.
+\\[2\baselineskip]2.9. (a) Prove or provide a counterexample: if $c$ and $d$ are perfect squares, then $cd$ is a perfect square.
+\\[2\baselineskip]To prove this statement, we need to show that if $c$ and $d$ are perfect squares, then their product $cd$ is also a perfect square. Assume that $c$ and $d$ are perfect squares, meaning that there exist integers $x$ and $y$ such that $c = x^2$ and $d = y^2$. Then, we can express their product as:
+\\[2\baselineskip]\[cd = (x^2)(y^2) = (xy)^2\] Since $(xy)^2$ is the square of the integer $xy$, $cd$ is a perfect square. Therefore, the statement is true.
+\\[2\baselineskip](b) Prove or provide a counterexample: if $cd$ is a perfect square and $c \neq d$, then $c$ and $d$ are perfect squares.
+\\[2\baselineskip]To prove this statement, we need to show that if $cd$ is a perfect square and $c \neq d$, then $c$ and $d$ are also perfect squares.
+\\[2\baselineskip]Counterexample: Let $c = 4$ and $d = 9$. Both $c$ and $d$ are perfect squares. However, their product $cd = 4 \cdot 9 = 36$ is also a perfect square, but $c$ and $d$ are not equal. Therefore, the statement is false.
+\\[2\baselineskip](c) Prove or provide a counterexample: if $c$ and $d$ are perfect squares such that $c > d$, and $x^2 = c$ and $y^2 = d$ for integers $x$ and $y$, then $x > y$.
+\\[2\baselineskip]To prove this statement, we need to show that if $c$ and $d$ are perfect squares such that $c > d$, and $x^2 = c$ and $y^2 = d$ for integers $x$ and $y$, then $x > y$. Since $c > d$ and $c = x^2$ and $d = y^2$, taking the square root of both sides, we have $x > y$. Therefore, the statement is true.
+\\[2\baselineskip]2.11. Critique the following "proof":
+\\[2\baselineskip]$x > y$
+\\$x^2 > y^2$
+\\$x^2 - y^2 > 0$
+\\$(x + y)(x - y) > 0$
+\\$x + y > 0$
+\\$x > -y$
+\\[2\baselineskip]The given "proof" is incorrect because it assumes that if $x^2 > y^2$, then $x > y$. However, this is not always true. The correct statement should be:
+\\[2\baselineskip]$x > y$
+\\$x^2 > y^2$
+\\$x^2 - y^2 > 0$
+\\$(x + y)(x - y) > 0$
+\\[2\baselineskip]Either $x + y > 0$ and $x - y > 0$, or $x + y < 0$ and $x - y < 0$ Therefore, we cannot conclude that $x > -y$.
+\\[2\baselineskip]2.13. Prove or provide a counterexample: If $a$ and $b$ are positive integers such that $a^3 > b^3$, then $a > b$.
+\\[2\baselineskip]To prove this statement, we need to show that if $a^3 > b^3$, then $a > b$. Let's assume that $a$ and $b$ are positive integers such that $a^3 > b^3$. Taking the cube root of both sides, we have: $a > b$ Therefore, we can conclude that if $a^3 > b^3$, then $a > b$.
+\\[2\baselineskip]2.15. Prove or provide a counterexample: If $a$ and $b$ are positive integers such that $a^2 + b^2 = 25$, then $a$ and $b$ cannot both be odd.
+\\[2\baselineskip]To prove this statement, we need to show that if $a^2 + b^2 = 25$, then $a$ and $b$ cannot both be odd. Assume that $a$ and $b$ are both odd integers. In that case, we can express $a$ as $2x + 1$ and $b$ as $2y + 1$, where $x$ and $y$ are integers. Substituting these values into the equation $a^2 + b^2 = 25$, we have: $
+\\[2\baselineskip](2x + 1)^2 + (2y + 1)^2 = 25$
+\\[2\baselineskip]Simplifying, we get:
+\\[2\baselineskip]$4x^2 + 4x + 1 + 4y^2 + 4y + 1 = 25$ $4x^2 + 4y^2 + 4x + 4y + 2 = 25$ $2x^2 + 2y^2 + 2x + 2y = 11$
+\\[2\baselineskip]Since the left-hand side is an even number (sum of even and even terms), and the right-hand side is an odd number, the equation cannot hold. Therefore, we can conclude that if $a$ and $b$ are positive integers such that $a^2 + b^2 = 25$, then $a$ and $b$ cannot both be odd.
+\end{document}
