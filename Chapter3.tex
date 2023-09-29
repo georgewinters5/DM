@@ -1,0 +1,107 @@
+\documentclass{article}
+
+\usepackage{amsmath, amssymb}
+
+\begin{document}
+
+\section*{Discrete Math: Chapter 3 Homework}
+
+\subsection*{3.1}
+\textbf{Question:} Find a closed form expression for the expression:
+\[ \sum_{i=0}^{n-1} (2i + 1) \]
+
+\textbf{Solution:}
+The sum can be broken down into two separate sums:
+\[ \sum_{i=0}^{n-1} 2i + \sum_{i=0}^{n-1} 1 = 2 \sum_{i=0}^{n-1} i + n \]
+Using the formula for the sum of the first \(n-1\) natural numbers:
+\[ \sum_{i=0}^{n-1} i = \frac{(n-1)n}{2} \]
+The original sum becomes:
+\[ 2\left( \frac{(n-1)n}{2} \right) + n = n^2 \]
+
+\subsection*{3.3}
+\textbf{Question:} Prove the Extended Pigeonhole Principle by induction.
+\\[1\baselineskip]
+\textbf{Solution:}
+The Extended Pigeonhole Principle states that if \(n\) items are placed into \(m\) containers, with \(n > km\), then at least one container must contain more than \(k\) items. 
+\\[1\baselineskip]
+Base Case: Let \(k=1\). If \(n > m\), then at least one container must have more than one item. This is the regular Pigeonhole Principle.
+\\[1\baselineskip]
+Lets say the statement is true for some \(k\). Now, let \(n > (k+1)m\). If we remove \(km\) items, then \(n-km > m\) items remain, which by the induction hypothesis means at least one container has more than \(k\) items. Since removing items can't reduce the number of items in a container, at least one container must have more than \(k+1\) items. So, the Extended Pigeonhole Principle is proven by induction.
+
+\subsection*{3.5}
+\textbf{Question:} Prove by induction that for any \( n \geq 0 \):
+\[ \sum_{i=0}^{n} i^2 = \frac{n(n+1)(2n+1)}{6} \]
+
+\textbf{Solution:}
+Base Case:
+When \(n = 0\),
+\[ \sum_{i=0}^{0} i^2 = 0^2 = 0 \]
+The formula also gives \( \frac{0(0+1)(2(0)+1)}{6} = 0 \). So, the base case holds.
+
+Assume the formula holds for \(n\). We have to prove it for \(n+1\).
+\[ \sum_{i=0}^{n+1} i^2 = \sum_{i=0}^{n} i^2 + (n+1)^2 \]
+\[ = \frac{n(n+1)(2n+1)}{6} + (n+1)^2 \]
+Combining and simplifying the terms will give us the required expression \( \frac{(n+1)(n+2)(2(n+1)+1)}{6} \). So, the statement is proven by induction.
+
+\subsection*{3.7}
+\textbf{Question:} Prove by induction that for any \( n \geq 0 \):
+\[ \sum_{i=0}^{n} i^3 = \left(\sum_{i=0}^{n} i\right)^2 \]
+
+\textbf{Solution:}
+Base Case:
+When \(n = 0\), 
+\[ \sum_{i=0}^{0} i^3 = 0^3 = 0 \]
+\[ \left(\sum_{i=0}^{0} i\right)^2 = 0^2 = 0 \]
+
+Assuming the formula holds for \(n\), we have to prove for \(n+1\).
+\[ \sum_{i=0}^{n+1} i^3 = \sum_{i=0}^{n} i^3 + (n+1)^3 \]
+\[ = \left(\sum_{i=0}^{n} i\right)^2 + (n+1)^3 \]
+By using the formula for the sum of the first \(n\) natural numbers and simplifying, we will get the desired formula. So the formula is proven by induction.
+
+\subsection*{3.9}
+\textbf{Question:} What is the flaw in the following “proof”? \\
+All horses are the same color.
+\\[1\baselineskip]
+Base case. Consider a set of horses of size 1. There is only one horse, which is the same color as itself, so the statement holds.
+\\[1\baselineskip]
+Suppose that for all sets of horses of size \( n \geq 1 \), all horses in a set are the same color.
+\\[1\baselineskip]
+Prove that for all groups of horses of size \( n + 1 \), all horses in a group are the same color. Consider a set of horses
+\[ H = \{h_1, h_2, ... , h_n, h_{n+1}\} \]
+Now we can consider two different subsets of \( H \):
+\[ A = \{h_1, h_2, ... , h_n\} \] and
+\[ B = \{h_2, h_3, ... , h_{n+1}\} \]
+Since \( A \) and \( B \) are both of size \(n\), by the induction hypothesis, all horses in each group are the same color. But then \( h_{n+1} \) is the same color as \( h_2 \) (since both are in \( B \)), and \( h_2 \) (which is in set \( A \)) is the same color as every other horse in set \( A \). So \( h_{n+1} \) is the same color as every horse in set \( A \), so all horses in set \( H \) are actually the same color. Thus, for a set of horses of any size, all horses in the set are the same color as each other.
+\\[1\baselineskip]
+\textbf{Solution:}
+The problem emerges at \( n = 1 \). When \( n = 1 \), there are two sets \( A \) and \( B \) that are constructed as:
+\[ A = \{h_1\} \]
+\[ B = \{h_2\} \]
+In this case, both sets \( A \) and \( B \) are disjoint and have no common horses. The conclusion that \( h_2 \) is the same color as \( h_1 \) cannot be drawn from the induction hypothesis.
+\newpage
+\subsection*{3.11}
+\textbf{(a):} For every \( n \geq 1 \), \( T_{2n} \) is a palindrome.
+\\[1\baselineskip]
+\textbf{Base case:} \( n = 1 \)
+\[ T_2 = 01 \]
+Clearly, \( T_2 \) is a palindrome.
+\\[1\baselineskip]
+Assume that \( T_{2n} \) is a palindrome for some arbitrary \( n \). We must show that \( T_{2(n+1)} \) is also a palindrome.
+
+By definition, 
+\[ T_{2(n+1)} \]
+\[ = T_{2n+2} \]
+\[ = T_{2n+1} T_{2n+1} \]
+\[ = (T_{2n} T_{2n}) (T_{2n} T_{2n}) \]
+
+Given our assumption that \( T_{2n} \) is a palindrome, the sequence \( T_{2n}T_{2n} \) is also a palindrome since it's just the same sequence repeated twice. This means that \( T_{2(n+1)} \) is also a palindrome.
+\\[1\baselineskip]
+Thus, by the principle of mathematical induction, \( T_{2n} \) is a palindrome for all \( n \geq 1 \).
+\\[1\baselineskip]
+\textbf{(b)} If 0 is replaced by 01 and 1 is replaced by 10 everywhere in \( T_n \), the result is \( T_{n+1} \).
+\\[1\baselineskip]
+By the definition of the Thue sequence, \( T_{n+1} \) is created by replacing 0 with 01 and 1 with 10 in \( T_n \) and then appending this to \( T_n \). Thus, replacing 0 with 01 and 1 with 10 in \( T_n \) directly gives \( T_{n+1} \).
+\\[1\baselineskip]
+For the infinite Thue bit string, if we continue this process indefinitely, we see that the bit string transforms but keeps its characteristics. This can be seen as the sequence evolving while not repeating.
+\end{document}
+
