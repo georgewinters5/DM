@@ -1,0 +1,100 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb}
+\usepackage{setspace}
+\onehalfspacing
+
+\begin{document}
+
+\section*{Question 7.1}
+Two sets have the same size if there is a bijection between them. Prove that there are infinitely many different sizes of infinite sets; that is, that there are at least a countable number of infinite sets, no two of which have the same size.
+
+\textbf{Answer:} Cantor's Diagonal Argument shows that there are uncountably many sizes of infinite sets. This is because the power set of the natural numbers, denoted as $P(\mathbb{N})$, is uncountable. There is no bijection between $\mathbb{N}$ and $P(\mathbb{N})$. Therefore, there are infinitely many different sizes of infinite sets, and they are uncountable.
+
+\section*{Question 7.3}
+Johnny is skeptical about the proof of Theorem 7.4. He agrees that the diagonalization process yields a set of natural numbers $D$ that is not in the original list $S_0, S_1, \ldots$. He claims that the new set can be accommodated by moving all the indices up by 1 and sliding the new set in at the beginning. What is wrong with his argument?
+
+\textbf{Answer:} Johnny's argument is flawed because the construction of $D$ ensures that it cannot be equal to any $S_i$ for any $i$. If we were to move all the indices up by 1 and set $T_0 = D$ and $T_{i+1} = S_i$ for each $i$, we would simply have a new list of sets, but $D$ would still not be in this list. The reason is that $D$ differs from each $S_i$ at the position where the diagonal and the $i$-th row intersect, making it impossible to accommodate $D$ by shifting the indices. Therefore, Johnny's argument is invalid.
+
+\section*{Question 7.5}
+Which of the following scenarios are possible? Provide examples or explanations.
+
+(a) The set difference of two uncountable sets is countable.
+
+(b) The set difference of two countably infinite sets is countably infinite.
+
+(c) The power set of a countable set is countable.
+
+(d) The union of a collection of finite sets is countably infinite.
+
+(e) The union of a collection of finite sets is uncountable.
+
+(f) The intersection of two uncountable sets is empty.
+
+\textbf{Answers:}
+
+(a) The set difference of two uncountable sets can be countable. For example, consider the sets $A = (0, 1)$ and $B = (0, 0.5)$. The set difference $A \setminus B = (0.5, 1)$ is a countable interval.
+
+(b) The set difference of two countably infinite sets can be countably infinite. For instance, consider the sets of even natural numbers $A = \{2, 4, 6, \ldots\}$ and $B = \{4, 8, 12, \ldots\}$. The set difference $A \setminus B = \{2, 6, 10, \ldots\}$ is countably infinite.
+
+(c) The power set of a countable set is countable. For example, if we have a countable set $\mathbb{N}$, then its power set $P(\mathbb{N})$ is countable.
+
+(d) The union of a collection of finite sets is countably infinite. Finite sets contain a finite number of elements, and the union of countably many finite sets is still countably infinite.
+
+(e) The union of a collection of finite sets cannot be uncountable. It remains countably infinite or becomes finite.
+
+(f) The intersection of two uncountable sets can be empty. For example, the intersection of the sets of real numbers and irrational numbers is empty.
+
+\section*{Question 7.7}
+(a) Show that there are as many ordered pairs of real numbers between 0 and 1 as there are real numbers in that interval. Exhibit a bijection $f : [0, 1] \times [0, 1] \leftrightarrow [0, 1]$.
+
+(b) Extend the result of part (a) to give a bijection between pairs of nonnegative real numbers and nonnegative real numbers.
+
+\textbf{Answers:}
+(a) To show that there are as many ordered pairs of real numbers between 0 and 1 as there are real numbers in that interval, we can exhibit a bijection. Consider a real number in the interval $[0, 1]$ represented as a decimal, such as $0.x_1x_2x_3...$, where each $x_i$ is a digit from 0 to 9. Now, for every real number in $[0, 1]$, pair it with another real number as follows: $0.x_1x_1x_2x_2x_3x_3...$, where each $x_i$ is the corresponding digit from the original number. This creates a bijection between $[0, 1] \times [0, 1]$ and $[0, 1]$.
+
+(b) To extend the result to pairs of nonnegative real numbers, we can apply a similar idea. Given two nonnegative real numbers represented as decimal expansions, pair them by interleaving their digits. For example, if we have $0.x_1x_2x_3...$ and $0.y_1y_2y_3...$, we can create the pair $0.x_1y_1x_2y_2x_3y_3...$. This establishes a bijection between pairs of nonnegative real numbers and nonnegative real numbers.
+
+\section*{Question 7.9}
+In each case, state whether the set is finite, countably infinite, or uncountable, and explain why.
+
+(a) The set of all books, where a "book" is a finite sequence of uppercase and lowercase Roman letters, Arabic numerals, the space symbol, and certain punctuation marks: ; , . ' : — ( ) ! ? "
+
+(b) The set of all books of less than 500,000 symbols.
+
+(c) The set of all finite sets of books.
+
+(d) The set of all irrational numbers greater than 0 and less than 1.
+
+(e) The set of all sets of numbers that are divisible by 17.
+
+(f) The set of all sets of even prime numbers.
+
+(g) The set of all sets of powers of 2.
+
+(h) The set of all functions from $\mathbb{Q}$ to $\{0, 1\}$.
+
+\textbf{Answers:}
+(a) The set of all books, where a "book" is a finite sequence of characters, is countably infinite. Each book can be represented as a finite string, and the set of all possible finite strings is countably infinite.
+
+(b) The set of all books of less than 500,000 symbols is countably infinite. There are a countable number of books of each possible length, and the union of countably many countable sets is still countable.
+
+(c) The set of all finite sets of books is countably infinite. Each finite set can be enumerated, and the set of all finite sets is a countable union of countable sets.
+
+(d) The set of all irrational numbers greater than 0 and less than 1 is uncountable. This is a well-known result, and it follows from Cantor's Diagonal Argument.
+
+(e) The set of all sets of numbers that are divisible by 17 is uncountable. There are uncountably many subsets of the set of natural numbers.
+
+(f) The set of all sets of even prime numbers is countably infinite. There are only finitely many even prime numbers, so the set of all such sets is countable.
+
+(g) The set of all sets of powers of 2 is uncountable. This is similar to (e), as there are uncountably many subsets of the set of natural numbers.
+
+(h) The set of all functions from $\mathbb{Q}$ to $\{0, 1\}$ is uncountable. This is because there are uncountably many real numbers in $\mathbb{Q}$, and each function maps each real number to either 0 or 1. Therefore, the set of all such functions is uncountable.
+
+\section*{Question 7.11}
+Prove Theorem 7.3.
+
+\textbf{Answer:} Theorem 7.3 states that the union of countably many countably infinite sets is countably infinite. To prove this, consider a countable collection of countably infinite sets $S_0, S_1, S_2, \ldots$. Since each of these sets is countably infinite, you can enumerate their elements.
+
+To construct an enumeration of the union of these sets, start by enumerating the elements of $S_0$, then move to the elements of $S_1$, then to $S_2$, and so on. By continuing this process, you will enumerate all the elements in the union, and this enumeration is countable.
+
+\end{document}
